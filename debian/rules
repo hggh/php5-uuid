@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+export NO_INTERACTION=1
+
+%:
+	dh $@ --buildsystem=phppear --with phppear
+
+override_dh_auto_install:
+	dh_auto_install -O--buildsystem=phppear
+	install --mode=644 -D debian/uuid.ini debian/php5-uuid/etc/php5/mods-available/uuid.ini
+
+override_dh_auto_test:
+ifeq (,$(filter forcecheck,$(DEB_BUILD_OPTIONS)))
+	@echo 'Testsuite disabled, run with DEB_BUILD_OPTIONS=forcecheck to enable'
+else
+	dh_auto_test -O--buildsystem=phppear
+endif

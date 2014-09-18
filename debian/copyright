@@ -1,0 +1,12 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: uuid
+Upstream-Contact: Hartmut Holzgraefe <hholzgra@php.net>
+Source: http://pecl.php.net/package/uuid
+
+Files: *
+Copyright: Hartmut Holzgraefe <hholzgra@php.net>
+License: LGPL
+
+Files: debian/*
+Copyright: 2014 Jonas Genannt <jonas.genannt@capi2name.de>
+License: LGPL

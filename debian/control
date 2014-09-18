@@ -1,0 +1,16 @@
+Source: php5-uuid
+Section: web
+Priority: optional
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Uploaders: Jonas Genannt <jonas.genannt@capi2name.de>
+Build-Depends: debhelper (>= 9), php5-dev, pkg-php-tools (>= 1.6~), uuid-dev
+Standards-Version: 3.9.5
+Homepage: http://pecl.php.net/package/uuid
+
+Package: php5-uuid
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${phppear:Debian-Depends}
+Recommends: ${phppear:Debian-Recommends}
+Breaks: ${phppear:Debian-Breaks}
+Description: UUID extension for PHP
+ This extension allows php applications to use UUID

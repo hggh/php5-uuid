@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+if [ "${1}" = "remove" ] || [ "${1}" = "upgrade" ] || [ "${1}" = "deconfigure" ]; then
+	php5dismod uuid
+fi
+
+#DEBHELPER#
+
+exit 0
